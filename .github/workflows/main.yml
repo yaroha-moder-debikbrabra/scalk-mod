@@ -11,8 +11,10 @@ jobs:
         with:
           java-version: '21'
           distribution: 'temurin'
+      - name: permission
+        run: chmod +x gradlew
       - name: build
-        run: gradle build
+        run: ./gradlew build
       - name: upload artifacts
         uses: actions/upload-artifact@v4
         with:
