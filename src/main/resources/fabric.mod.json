@@ -1,0 +1,19 @@
+{
+    "schemaVersion": 1,
+    "id": "sculkmod",
+    "version": "1.0.0",
+    "name": "Sculk Spyglass",
+    "description": "Мод на скалковую трубу с эхо-локацией",
+    "authors": [ "YADEBIKBRABRA" ],
+    "contact": { "sources": "https://github.com" },
+    "license": "MIT",
+    "icon": "assets/sculkmod/textures/item/sculk_spyglass.png",
+    "entrypoints": {
+      "main": [ "net.sculkmod.SculkMod" ]
+    },
+    "depends": {
+      "fabricloader": ">=0.15.0",
+      "minecraft": "~1.21.1",
+      "java": ">=21"
+    }
+  }

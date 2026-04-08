@@ -1,0 +1,17 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "category": "misc",
+    "pattern": [
+      "CCC",
+      "CSC",
+      "CCC"
+    ],
+    "key": {
+      "C": { "item": "sculkmod:concentrated_echo_shard" },
+      "S": { "item": "minecraft:spyglass" }
+    },
+    "result": {
+      "id": "sculkmod:sculk_spyglass",
+      "count": 1
+    }
+  }
