@@ -1,9 +1,4 @@
-name: build
-on: [push, pull_request]
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
+steps:
       - name: checkout repository
         uses: actions/checkout@v4
       - name: setup jdk 21
@@ -11,6 +6,8 @@ jobs:
         with:
           java-version: '21'
           distribution: 'temurin'
+      - name: fix windows line endings
+        run: sed -i 's/\r$//' gradlew
       - name: permission
         run: chmod +x gradlew
       - name: build
