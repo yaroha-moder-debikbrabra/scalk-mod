@@ -1,4 +1,9 @@
-steps:
+name: build
+on: [push, pull_request]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
       - name: checkout repository
         uses: actions/checkout@v4
       - name: setup jdk 21
@@ -12,3 +17,8 @@ steps:
         run: chmod +x gradlew
       - name: build
         run: ./gradlew build --no-daemon
+      - name: upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: SculkMod-Jar
+          path: build/libs/*.jar
